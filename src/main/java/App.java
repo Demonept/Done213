@@ -10,11 +10,12 @@ public class App {
         HelloWorld beanS =
                 (HelloWorld) applicationContext.getBean("helloworld");
         Cat catFir = (Cat) applicationContext.getBean("cat");
+        System.out.println(bean.getMessage());
         System.out.println(catFir.getVoice());
         Cat catSec = (Cat) applicationContext.getBean("cat");
-        System.out.println(catFir==catSec);
-        System.out.println(bean==beanS);
+        System.out.println("Ссылки на объекты котов равны? " + (catFir==catSec));
+        System.out.println("Ссылки на объекты приветмиров равны? " + (bean==beanS));
 
-        System.out.println(bean.getMessage());
+
     }
 }
